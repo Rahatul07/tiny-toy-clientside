@@ -6,5 +6,5 @@
 }
 
 .default {
-  @apply font-medium tracking-wide text-white transition-colors duration-200  hover:text-primary hover:bg-white;
+  @apply tracking-wide text-white transition-colors duration-200  hover:text-primary hover:bg-white;
 }

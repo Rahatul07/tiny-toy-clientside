@@ -5,11 +5,13 @@ import AllToys from "../../pages/AllToys/AllToys";
 import AddToy from "../../pages/AddToy/AddToy";
 import MyToys from "../../pages/MyToys/MyToys";
 import Blogs from "../../pages/Blogs/Blogs";
+import ErrorMessage from "../../pages/ErrorMessage/ErrorMessage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <ErrorMessage />,
     children: [
       {
         path: "/",

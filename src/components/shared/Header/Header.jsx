@@ -218,6 +218,9 @@ const Header = () => {
                                 aria-label="logOut"
                                 title="logOut"
                                 onClick={handleLogOut}
+                                className={({ isActive }) =>
+                                  isActive ? "default" : "active"
+                                }
                               >
                                 LogOut
                               </NavLink>
