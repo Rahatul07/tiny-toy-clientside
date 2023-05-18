@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo/logo.png";
 import Hamburger from "hamburger-react";
 const Header = () => {
@@ -16,10 +16,45 @@ const Header = () => {
         console.log(error);
       });
   };
+  const navItems = (
+    <>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/allToys">All Toys</Link>
+      </li>
 
+      <li>
+        <Link to="/addToy">Add A Toy</Link>
+      </li>
+      <li>
+        <Link to="/Blog">Blog</Link>
+      </li>
+
+      {user?.email ? (
+        <li>
+          <Link to="/bookings">My Bookings</Link>
+          <Link onClick={handleLogOut}>Log out</Link>
+        </li>
+      ) : (
+        <>
+          <li>
+            <Link to="/logIn">Login</Link>
+          </li>
+          <li>
+            <Link to="/register">Register</Link>
+          </li>
+          <li>
+            <Link to="/myToys">My Toys</Link>
+          </li>
+        </>
+      )}
+    </>
+  );
   return (
     <div>
-      <div className=" mx-auto  px-10 bg-black -mb-3 shadow-lg shadow-slate-400 ">
+      <div className=" mx-auto  px-10 bg-primary  shadow-lg shadow-slate-300 ">
         <div className="navbar   text-white ">
           <div className="navbar-start">
             <img className="h-14 w-20 " src={logo} alt="" />
