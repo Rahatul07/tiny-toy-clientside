@@ -103,7 +103,7 @@ const Register = () => {
       <div className="hero min-h-screen  ">
         <div className="hero-content flex-col ">
           <div className="text-center ">
-            <h1 className="text-5xl font-bold  text-primary my-5">
+            <h1 className="text-5xl font-bold  text-white my-5">
               Please Register now!
             </h1>
           </div>
@@ -111,49 +111,49 @@ const Register = () => {
             <form onSubmit={handleSignUp} className="card-body">
               <div className="form-control ">
                 <label className="label ">
-                  <span className="label-text text-gray-600">Name</span>
+                  <span className="label-text text-gray-900">Name</span>
                 </label>
                 <input
                   type="text"
                   name="name"
                   placeholder="name"
-                  className="input input-bordered glass  text-gray-600 "
+                  className="input input-bordered glass  text-gray-900 "
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text text-gray-600">Photo Url</span>
+                  <span className="label-text text-gray-900">Photo Url</span>
                 </label>
                 <input
                   type="url"
                   name="photo_url"
                   placeholder="Place your photo url"
-                  className="input input-bordered glass  text-gray-600"
+                  className="input input-bordered glass  text-gray-900"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text text-gray-600">Email</span>
+                  <span className="label-text text-gray-900">Email</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="email"
-                  className="input input-bordered glass  text-gray-600"
+                  className="input input-bordered glass  text-gray-900"
                   required
                 />
               </div>
 
               <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text text-gray-600">Password</span>
+                  <span className="label-text text-gray-900">Password</span>
                 </label>
                 <input
                   type={passwordVisible ? "text" : "password"}
                   placeholder="Enter your password"
-                  className="input input-bordered  glass  text-gray-600"
+                  className="input input-bordered  glass  text-gray-900"
                   name="password"
                   required
                 />
@@ -171,14 +171,14 @@ const Register = () => {
               </div>
               <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text text-gray-600 ">
+                  <span className="label-text text-gray-900 ">
                     Confirm Password
                   </span>
                 </label>
                 <input
                   type={passwordVisible ? "text" : "password"}
                   placeholder="confirm password"
-                  className="input input-bordered glass  text-gray-600"
+                  className="input input-bordered glass  text-gray-900"
                   name="confirm"
                 />
                 <button
@@ -200,7 +200,7 @@ const Register = () => {
                 <button className="btn btn-primary mb-3 ">Register</button>
               </div>
               <small>
-                <p className="text-gray-600">
+                <p className="text-gray-900">
                   Already have an account? Please
                   <Link to="/login">
                     <span className="mx-1 underline text-primary">Login</span>

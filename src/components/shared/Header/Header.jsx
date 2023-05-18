@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../../assets/logo/logo.png";
 import profilePic from "../../../assets/default-profile-img/profile.jpg";
 import Hamburger from "hamburger-react";
+import { AuthContext } from "../../../contexts/AuthProvider";
 const Header = () => {
-  const user = "";
-  const logOut = () => {};
+  const { user, logOut } = useContext(AuthContext);
   const [isOpen, setOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleLogOut = () => {
@@ -137,7 +137,7 @@ const Header = () => {
           <div className="navbar-end ">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img title={user?.displayName} src={profilePic} />
+                <img title={user?.displayName} src={user?.photoURL} />
               </div>
             </label>
           </div>

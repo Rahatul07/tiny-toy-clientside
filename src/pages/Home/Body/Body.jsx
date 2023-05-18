@@ -6,7 +6,7 @@ const Body = () => {
     <div
       className="md:flex  justify-between pt-10 mx-auto pl-10 pb-10 "
       style={{
-        backgroundImage: `linear-gradient(to right,  rgba(116, 10, 254, 0.9), rgba(4, 0, 220, 0.3))`,
+        backgroundImage: `linear-gradient(to right, rgba(116, 44, 254, 0.9), rgba(151, 44, 154, 0.4))`,
       }}
     >
       <div className="w-3/5 h-auto ">

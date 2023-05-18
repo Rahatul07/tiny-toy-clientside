@@ -84,7 +84,7 @@ const Login = () => {
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col ">
           <div className="text-center ">
-            <h1 className="text-5xl font-bold  text-primary my-5">
+            <h1 className="text-5xl font-bold  text-white my-5">
               Please Login now!
             </h1>
           </div>
@@ -92,25 +92,25 @@ const Login = () => {
             <form onSubmit={handleSignIn} className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text text-gray-600">Email</span>
+                  <span className="label-text text-gray-900">Email</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="email"
-                  className="input input-bordered glass  text-gray-600"
+                  className="input input-bordered glass  text-gray-900"
                   required
                 />
               </div>
 
               <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text text-gray-600">Password</span>
+                  <span className="label-text text-gray-900">Password</span>
                 </label>
                 <input
                   type={passwordVisible ? "text" : "password"}
                   placeholder="Enter your password"
-                  className="input input-bordered  glass  text-gray-600"
+                  className="input input-bordered  glass  text-gray-900"
                   name="password"
                   required
                 />
@@ -131,7 +131,7 @@ const Login = () => {
                   <a
                     onClick={handlePasswordReset}
                     href="#"
-                    className="label-text-alt link link-hover text-gray-600"
+                    className="label-text-alt link link-hover text-gray-900"
                   >
                     Forgot password?
                   </a>
@@ -144,7 +144,7 @@ const Login = () => {
                 <button className="btn btn-primary mb-3 ">Login</button>
               </div>
               <small>
-                <p className="text-gray-600">
+                <p className="text-gray-900">
                   Have no account? Please
                   <Link to="/register">
                     <span className="mx-1 underline text-primary">
