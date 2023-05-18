@@ -3,7 +3,13 @@ import image from "../../../assets/homeCarousel/01.png";
 
 const Body = () => {
   return (
-    <div className="md:flex items-center justify-between mt-10 mx-auto">
+    <div
+      className="md:flex items-center justify-between pt-10 mx-auto pl-10"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(116, 10, 254, 0.9), rgba(4, 2, 100, 0.1))",
+      }}
+    >
       <div className="w-96 ">
         <h1 className="text-5xl font-bold ">
           Get your <br />
