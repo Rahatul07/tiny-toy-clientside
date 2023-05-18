@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.active {
+  @apply font-medium tracking-wide text-orange-500 transition-colors duration-200 hover:bg-white hover:text-primary;
+}
+
+.default {
+  @apply font-medium tracking-wide text-white transition-colors duration-200  hover:text-primary hover:bg-white;
+}

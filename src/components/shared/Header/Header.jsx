@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../../assets/logo/logo.png";
+import profilePic from "../../../assets/default-profile-img/profile.jpg";
 import Hamburger from "hamburger-react";
 const Header = () => {
   const user = { rahat: 20 };
@@ -16,42 +17,7 @@ const Header = () => {
         console.log(error);
       });
   };
-  const navItems = (
-    <>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/allToys">All Toys</Link>
-      </li>
 
-      <li>
-        <Link to="/addToy">Add A Toy</Link>
-      </li>
-      <li>
-        <Link to="/Blog">Blog</Link>
-      </li>
-
-      {user?.email ? (
-        <li>
-          <Link to="/bookings">My Bookings</Link>
-          <Link onClick={handleLogOut}>Log out</Link>
-        </li>
-      ) : (
-        <>
-          <li>
-            <Link to="/logIn">Login</Link>
-          </li>
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
-          <li>
-            <Link to="/myToys">My Toys</Link>
-          </li>
-        </>
-      )}
-    </>
-  );
   return (
     <div>
       <div className=" mx-auto  px-10 bg-primary  shadow-lg shadow-slate-300 ">
@@ -60,7 +26,7 @@ const Header = () => {
             <img className="h-14 w-20 " src={logo} alt="" />
           </div>
           <div className="navbar-center text-xl 2xl:text-2xl uppercase h-12 pr-10 hidden lg:flex">
-            <ul className="pl-3 menu-horizontal px-1">
+            <ul className="pl-3 menu menu-horizontal px-1">
               <li className="ml-5">
                 <NavLink
                   to="/"
@@ -71,6 +37,30 @@ const Header = () => {
                   }
                 >
                   Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/allToys"
+                  aria-label="all-toys"
+                  title="All-toys"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  All Toys
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/addToy"
+                  aria-label="add-toy"
+                  title="add-toy"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  Add Toy
                 </NavLink>
               </li>
 
@@ -88,6 +78,18 @@ const Header = () => {
               </li>
               {user ? (
                 <>
+                  <li>
+                    <NavLink
+                      to="/myToys"
+                      aria-label="my-toys"
+                      title="my-toys"
+                      className={({ isActive }) =>
+                        isActive ? "active" : "default"
+                      }
+                    >
+                      My Toys
+                    </NavLink>
+                  </li>
                   <li className="ml-5">
                     <NavLink
                       aria-label="logOut"
@@ -105,9 +107,9 @@ const Header = () => {
                 <>
                   <li className="ml-5">
                     <NavLink
-                      to="/logIn"
-                      aria-label="logIn"
-                      title="logIn"
+                      to="/login"
+                      aria-label="login"
+                      title="login"
                       className={({ isActive }) =>
                         isActive ? "active" : "default"
                       }
@@ -135,7 +137,7 @@ const Header = () => {
           <div className="navbar-end ">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img title={user?.displayName} src={user?.photoURL} />
+                <img title={user?.displayName} src={profilePic} />
               </div>
             </label>
           </div>
@@ -144,7 +146,7 @@ const Header = () => {
             <button
               aria-label="Open Menu"
               title="Open Menu"
-              className="p-2 -mr-1 transition text-primary duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
+              className="p-2 -mr-1 transition text-white duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-purple-500 focus:bg-bg-purple-500"
               onClick={() => setIsMenuOpen(true)}
             >
               <Hamburger toggled={isOpen} toggle={setOpen} />
@@ -162,7 +164,7 @@ const Header = () => {
                       <button
                         aria-label="Close Menu"
                         title="Close Menu"
-                        className="p-2 -mt-2 -mr-2 transition text-primary duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline "
+                        className="p-2 -mt-2 -mr-2 transition text-white border-2  duration-200 rounded hover:bg-purple-500 focus:bg-bg-purple-500 hover:text-white focus:text-white focus:outline-none focus:shadow-outline "
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <Hamburger toggled={isOpen} toggle={setOpen} />
@@ -171,42 +173,51 @@ const Header = () => {
                   </div>
                   <nav>
                     <div className="text-xl  uppercase h-full pr-10 navbar-center bg-gray-700  ">
-                      <ul className="pl-3  px-1">
-                        <li className="ml-5 mb-3 hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
-                          <NavLink
-                            to="/"
-                            aria-label="Home"
-                            title="Home"
-                            className={({ isActive }) =>
-                              isActive ? "active" : "default"
-                            }
-                          >
+                      <ul className="pl-3  px-1 ">
+                        <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                          <NavLink to="/" aria-label="Home" title="Home">
                             Home
                           </NavLink>
                         </li>
-
-                        <li className="ml-5 mb-3 hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl ">
+                        <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                           <NavLink
-                            to="/blogs"
-                            aria-label="blogs"
-                            title="blogs"
-                            className={({ isActive }) =>
-                              isActive ? "active" : "default"
-                            }
+                            to="/allToys"
+                            aria-label="all-toys"
+                            title="All-toys"
                           >
+                            All Toys
+                          </NavLink>
+                        </li>
+                        <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                          <NavLink
+                            to="/addToy"
+                            aria-label="add-toy"
+                            title="add-toy"
+                          >
+                            Add Toy
+                          </NavLink>
+                        </li>
+                        <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                          <NavLink to="/blogs" aria-label="blogs" title="blogs">
                             Blogs
                           </NavLink>
                         </li>
                         {user ? (
                           <>
-                            <li className="ml-5 mb-3 hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl ">
+                            <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                              <NavLink
+                                to="/myToys"
+                                aria-label="my-toys"
+                                title="my-toys"
+                              >
+                                My Toys
+                              </NavLink>
+                            </li>
+                            <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                               <NavLink
                                 aria-label="logOut"
                                 title="logOut"
                                 onClick={handleLogOut}
-                                className={({ isActive }) =>
-                                  isActive ? "default" : "active"
-                                }
                               >
                                 LogOut
                               </NavLink>
@@ -214,26 +225,20 @@ const Header = () => {
                           </>
                         ) : (
                           <>
-                            <li className="ml-5 mb-3 hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl ">
+                            <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                               <NavLink
-                                to="/logIn"
-                                aria-label="logIn"
-                                title="logIn"
-                                className={({ isActive }) =>
-                                  isActive ? "active" : "default"
-                                }
+                                to="/login"
+                                aria-label="login"
+                                title="login"
                               >
                                 LogIn
                               </NavLink>
                             </li>
-                            <li className="ml-5 mb-3 hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl ">
+                            <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                               <NavLink
                                 to="/register"
                                 aria-label="register"
                                 title="register"
-                                className={({ isActive }) =>
-                                  isActive ? "active" : "default"
-                                }
                               >
                                 REGISTER
                               </NavLink>
