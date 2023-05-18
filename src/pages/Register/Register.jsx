@@ -2,8 +2,8 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
 import React, { useContext, useState } from "react";
-import { AuthContext } from "../../contexts/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const Register = () => {
   const { auth, setUser, createUser, setLoading, logOut } =

@@ -4,7 +4,7 @@ import logo from "../../../assets/logo/logo.png";
 import profilePic from "../../../assets/default-profile-img/profile.jpg";
 import Hamburger from "hamburger-react";
 const Header = () => {
-  const user = { rahat: 20 };
+  const user = "";
   const logOut = () => {};
   const [isOpen, setOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
