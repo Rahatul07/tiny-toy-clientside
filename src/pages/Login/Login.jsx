@@ -88,29 +88,29 @@ const Login = () => {
               Please Login now!
             </h1>
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  glass">
+          <div className="glass card flex-shrink-0 w-full max-w-sm shadow-2xl ">
             <form onSubmit={handleSignIn} className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text text-white">Email</span>
+                  <span className="label-text text-gray-600">Email</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="email"
-                  className="input input-bordered glass  text-white"
+                  className="input input-bordered glass  text-gray-600"
                   required
                 />
               </div>
 
               <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text text-white">Password</span>
+                  <span className="label-text text-gray-600">Password</span>
                 </label>
                 <input
                   type={passwordVisible ? "text" : "password"}
                   placeholder="Enter your password"
-                  className="input input-bordered  glass  text-white"
+                  className="input input-bordered  glass  text-gray-600"
                   name="password"
                   required
                 />
@@ -131,7 +131,7 @@ const Login = () => {
                   <a
                     onClick={handlePasswordReset}
                     href="#"
-                    className="label-text-alt link link-hover text-white"
+                    className="label-text-alt link link-hover text-gray-600"
                   >
                     Forgot password?
                   </a>
@@ -144,7 +144,7 @@ const Login = () => {
                 <button className="btn btn-primary mb-3 ">Login</button>
               </div>
               <small>
-                <p className="text-white">
+                <p className="text-gray-600">
                   Have no account? Please
                   <Link to="/register">
                     <span className="mx-1 underline text-primary">

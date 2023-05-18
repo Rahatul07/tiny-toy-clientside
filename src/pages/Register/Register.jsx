@@ -1,17 +1,27 @@
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Swal from "sweetalert2";
-import { Link, useNavigate } from "react-router-dom";
+import { FaGoogle, FaGithub } from "react-icons/fa";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import React, { useContext, useState } from "react";
 import { updateProfile } from "firebase/auth";
 import { AuthContext } from "../../contexts/AuthProvider";
 
 const Register = () => {
-  const { auth, setUser, createUser, setLoading, logOut } =
-    useContext(AuthContext);
+  const {
+    auth,
+    setUser,
+    createUser,
+    setLoading,
+    logOut,
+    gitHubSignIn,
+    googleSignIn,
+  } = useContext(AuthContext);
 
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -66,10 +76,31 @@ const Register = () => {
         setError(error);
       });
   };
-
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const handleGithubSignIn = () => {
+    gitHubSignIn()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div>
-      <div className="hero min-h-screen ">
+      <div className="hero min-h-screen  ">
         <div className="hero-content flex-col ">
           <div className="text-center ">
             <h1 className="text-5xl font-bold  text-primary my-5">
@@ -80,49 +111,49 @@ const Register = () => {
             <form onSubmit={handleSignUp} className="card-body">
               <div className="form-control ">
                 <label className="label ">
-                  <span className="label-text text-white">Name</span>
+                  <span className="label-text text-gray-600">Name</span>
                 </label>
                 <input
                   type="text"
                   name="name"
                   placeholder="name"
-                  className="input input-bordered glass  text-white "
+                  className="input input-bordered glass  text-gray-600 "
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text text-white">Photo Url</span>
+                  <span className="label-text text-gray-600">Photo Url</span>
                 </label>
                 <input
                   type="url"
                   name="photo_url"
                   placeholder="Place your photo url"
-                  className="input input-bordered glass  text-white"
+                  className="input input-bordered glass  text-gray-600"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text text-white">Email</span>
+                  <span className="label-text text-gray-600">Email</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="email"
-                  className="input input-bordered glass  text-white"
+                  className="input input-bordered glass  text-gray-600"
                   required
                 />
               </div>
 
               <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text text-white">Password</span>
+                  <span className="label-text text-gray-600">Password</span>
                 </label>
                 <input
                   type={passwordVisible ? "text" : "password"}
                   placeholder="Enter your password"
-                  className="input input-bordered  glass  text-white"
+                  className="input input-bordered  glass  text-gray-600"
                   name="password"
                   required
                 />
@@ -140,14 +171,14 @@ const Register = () => {
               </div>
               <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text text-white ">
+                  <span className="label-text text-gray-600 ">
                     Confirm Password
                   </span>
                 </label>
                 <input
                   type={passwordVisible ? "text" : "password"}
                   placeholder="confirm password"
-                  className="input input-bordered glass  text-white"
+                  className="input input-bordered glass  text-gray-600"
                   name="confirm"
                 />
                 <button
@@ -169,7 +200,7 @@ const Register = () => {
                 <button className="btn btn-primary mb-3 ">Register</button>
               </div>
               <small>
-                <p className="text-white">
+                <p className="text-gray-600">
                   Already have an account? Please
                   <Link to="/login">
                     <span className="mx-1 underline text-primary">Login</span>
@@ -177,6 +208,22 @@ const Register = () => {
                 </p>
               </small>
             </form>
+            <div className="flex mx-auto gap-5 mb-5">
+              <button
+                onClick={handleGoogleSignIn}
+                className="btn bg-red-700 text-white mb-3"
+              >
+                <FaGoogle className="mx-2 text-lg text-white" />
+                Google
+              </button>
+              <button
+                onClick={handleGithubSignIn}
+                className="btn bg-black text-white "
+              >
+                <FaGithub className="mx-2 text-lg text-white" />
+                GitHub
+              </button>
+            </div>
           </div>
         </div>
       </div>

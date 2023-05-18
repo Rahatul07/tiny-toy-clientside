@@ -4,7 +4,7 @@ import image from "../../../assets/homeCarousel/01.png";
 const Body = () => {
   return (
     <div
-      className="md:flex  justify-between pt-10 mx-auto pl-10 pb-20 "
+      className="md:flex  justify-between pt-10 mx-auto pl-10 pb-10 "
       style={{
         backgroundImage: `linear-gradient(to right,  rgba(116, 10, 254, 0.9), rgba(4, 0, 220, 0.3))`,
       }}
@@ -26,7 +26,7 @@ const Body = () => {
         </p>
       </div>
       <div className="h-auto w-4/5 ">
-        <img className="" src={image} alt="" />
+        <img src={image} alt="" />
       </div>
     </div>
   );
