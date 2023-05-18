@@ -137,7 +137,10 @@ const Header = () => {
           <div className="navbar-end ">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img title={user?.displayName} src={user?.photoURL} />
+                <img
+                  title={user?.displayName}
+                  src={user?.photoURL ? user?.photoURL : profilePic}
+                />
               </div>
             </label>
           </div>
