@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 import { AuthContext } from "../../contexts/AuthProvider";
 
@@ -13,7 +14,7 @@ const AddToy = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/toys", {
+    fetch("https://tiny-toy-server.vercel.app/toys", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -21,6 +22,11 @@ const AddToy = () => {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
+        Swal.fire({
+          icon: "success",
+          title: "Successful!",
+          text: "A new toy has been added successfully!",
+        });
       });
     console.log(data);
   };
@@ -54,7 +60,7 @@ const AddToy = () => {
                   className=" pl-5  rounded-md  mr-5 h-14"
                   {...register("ratings", { required: true })}
                   placeholder="Ratings"
-                  type="number"
+                  type="text"
                 />
                 <input
                   className="pl-5 h-14 rounded-md  mr-5 mb-5"
@@ -66,7 +72,6 @@ const AddToy = () => {
                   className=" pl-5 h-14 rounded-md  mb-5 text-gray-400 "
                   {...register("sub-category")}
                 >
-                  <option value="Marvel">Marvel</option>
                   <option value="Avengers">Avengers</option>
                   <option value="Star wars">Star wars</option>
                   <option value="Transformers">Transformers</option>

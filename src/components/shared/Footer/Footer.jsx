@@ -9,10 +9,10 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-purple-950 px-10">
+      <footer className="bg-primary  px-10">
         <div className="container mx-auto py-8 px-4 ">
           <div className="flex flex-col lg:flex-row ">
-            <div className="w-full bg-purple-900 py-10 mr-5 pb-8 px-5 md:w-1/3 mb-5">
+            <div className="w-full bg-black bg-opacity-30 py-10 mr-5 pb-8 px-5 md:w-1/3 mb-5">
               <img className="w-48 h-32" src={logo} alt="" />
               <h4 className="text-white text-lg font-semibold mb-4">
                 About Us
@@ -22,7 +22,7 @@ const Footer = () => {
                 ultricies odio sed massa convallis, et aliquam diam molestie.
               </p>
             </div>
-            <div className="w-full md:w-1/3  bg-purple-900 py-10 mr-5 pb-8 px-5 mb-5">
+            <div className="w-full md:w-1/3  bg-black bg-opacity-30 py-10 mr-5 pb-8 px-5 mb-5">
               <h4 className="text-white text-lg font-semibold mb-4">
                 Customer Service
               </h4>
@@ -54,7 +54,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-full md:w-1/3 mb-5 bg-purple-900 py-10  pb-8 px-5">
+            <div className="w-full md:w-1/3 mb-5 bg-black bg-opacity-30 py-10  pb-8 px-5">
               <h4 className="text-white text-lg font-semibold mb-4">
                 Connect With Us
               </h4>

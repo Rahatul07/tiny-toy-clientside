@@ -15,7 +15,9 @@ const Main = () => {
       }}
     >
       <Header />
-      <Outlet />
+      <div className="md:min-h-[calc(100vh-341px)]">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
