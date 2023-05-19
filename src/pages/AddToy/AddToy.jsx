@@ -70,7 +70,7 @@ const AddToy = () => {
                 />
                 <select
                   className=" pl-5 h-14 rounded-md  mb-5 text-gray-400 "
-                  {...register("sub-category")}
+                  {...register("category")}
                 >
                   <option value="Avengers">Avengers</option>
                   <option value="Star wars">Star wars</option>

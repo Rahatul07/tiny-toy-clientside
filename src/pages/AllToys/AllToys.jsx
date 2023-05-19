@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
+
   useEffect(() => {
     fetch("https://tiny-toy-server.vercel.app/toys")
       .then((req) => req.json())
       .then((data) => setToys(data));
   }, []);
-  console.log(toys);
+
   return (
     <div>
       <h1 className="my-10 text-5xl text-white font-bold text-center">
@@ -33,11 +35,13 @@ const AllToys = () => {
                   <th>{index + 1}</th>
                   <td>{toy.sellerName}</td>
                   <td>{toy.title}</td>
-                  <td className="text-center">{toy.ratings}</td>
+                  <td className="text-center">{toy.category}</td>
                   <td className="text-center">{toy.price}</td>
                   <td className="text-center">{toy.quantity}</td>
                   <td>
-                    <button className="btn btn-primary">Details</button>
+                    <Link to={`/singleToyDetails/${toy._id}`}>
+                      <button className="btn btn-primary">Details</button>
+                    </Link>
                   </td>
                 </tr>
               </>

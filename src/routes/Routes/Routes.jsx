@@ -9,6 +9,7 @@ import ErrorMessage from "../../pages/ErrorMessage/ErrorMessage";
 import Register from "../../pages/Register/Register";
 import Login from "../../pages/Login/Login";
 import PrivateRoute from "../privateRoute/PrivateRoute";
+import SingleToyDetails from "../../pages/SingleToyDetails/SingleToyDetails";
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/singleToyDetails/:id",
+        element: <SingleToyDetails />,
       },
     ],
   },
