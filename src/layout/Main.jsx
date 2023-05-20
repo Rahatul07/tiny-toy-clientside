@@ -7,9 +7,6 @@ const Main = () => {
   return (
     <div
       className=" lg:max-w-7xl 2xl:max-w-full 2xl:mx-20  mx-auto "
-      // style={{
-      //   backgroundImage: `linear-gradient(to right,  rgba(116, 1, 254, 0.4), rgba(4, 10, 220, 0.2))`,
-      // }}
       style={{
         backgroundImage: `linear-gradient(to right, rgba(116, 44, 254, 0.9), rgba(151, 44, 154, 0.4))`,
       }}
