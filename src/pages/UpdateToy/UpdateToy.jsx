@@ -5,25 +5,24 @@ import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
 
 const UpdateToy = () => {
-  const [toys, setToys] = useState({});
+  const [toy, setToy] = useState({});
   const { user } = useContext(AuthContext);
+  console.log(toy);
 
-  console.log(toys[0].title);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-
-  useEffect(() => {
-    fetch("https://tiny-toy-server.vercel.app/toys")
-      .then((res) => res.json())
-      .then((data) => setToys(data));
-  }, []);
   const { id } = useParams();
+  useEffect(() => {
+    fetch(`https://tiny-toy-server.vercel.app/toys/${id}`)
+      .then((res) => res.json())
+      .then((data) => setToy(data));
+  }, []);
 
   const onSubmit = (data) => {
-    fetch(`https://tiny-toy-server.vercel.app/toys/${id}`, {
+    fetch(`https://tiny-toy-server.vercel.app/updateToys/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -54,14 +53,14 @@ const UpdateToy = () => {
               <div className="grid grid-cols-[4fr_1fr]">
                 <input
                   className=" pl-5 h-14 rounded-md mr-5  text-black mb-5"
-                  defaultValue={toys[0].title}
+                  defaultValue={toy.title}
                   {...register("title")}
                   placeholder="Toy name"
                 />
 
                 <input
                   className=" pl-5 h-14 rounded-md  "
-                  defaultValue={toys[0].price}
+                  defaultValue={toy.price}
                   {...register("price", { required: true })}
                   placeholder="Price"
                   type="number"
@@ -70,21 +69,21 @@ const UpdateToy = () => {
               <div className="grid grid-cols-3 w-full">
                 <input
                   className=" pl-5  rounded-md  mr-5 h-14"
-                  defaultValue={toys[0].ratings}
+                  defaultValue={toy.ratings}
                   {...register("ratings", { required: true })}
                   placeholder="Ratings"
                   type="text"
                 />
                 <input
                   className="pl-5 h-14 rounded-md  mr-5 mb-5"
-                  defaultValue={toys.quantity}
+                  defaultValue={toy.quantity}
                   {...register("quantity")}
                   placeholder="Available quantity"
                   type="number"
                 />
                 <select
                   className=" pl-5 h-14 rounded-md  mb-5 text-gray-400 "
-                  defaultValue={toys.category}
+                  defaultValue={toy.category}
                   {...register("category")}
                 >
                   <option value="Avengers">Avengers</option>
