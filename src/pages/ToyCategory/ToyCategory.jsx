@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import category1 from "../../../src/assets/single-toy-images/avengers/category-avenger.png";
 import category2 from "../../../src/assets/single-toy-images/transformers/category-transformer.png";
-import category3 from "../../../src/assets/single-toy-images/star wars/category-star-wars.png";
+import category3 from "../../../src/assets/single-toy-images/Star wars/category-star-wars.png";
 const ToyCategory = () => {
   const [toys, setToys] = useState([]);
-  const [activeTab, setActiveTab] = useState("Star Wars");
+  const [category, setCategory] = useState("Star wars");
   useEffect(() => {
-    fetch(`https://tiny-toy-server.vercel.app/toys/${activeTab}`)
+    fetch(`https://tiny-toy-server.vercel.app/toys?category=${category}`)
       .then((res) => res.json())
       .then((result) => {
         setToys(result);
       });
-  }, [activeTab]);
+  }, [category]);
   const handleTabClick = (tabName) => {
-    setActiveTab(tabName);
+    setCategory(tabName);
   };
+  console.log(toys);
   return (
     <div>
       <div className=" p-5">
@@ -25,7 +26,7 @@ const ToyCategory = () => {
           <div
             onClick={() => handleTabClick("Avengers")}
             className={`card h-56 bg-primary text-white flex-col items-center relative mb-5 w-40 rounded-xl  text-2xl  border-4  border-primary Avenger ${
-              activeTab == "Avengers"
+              category == "Avengers"
                 ? " border-warning bg-warning  text-gray-800"
                 : ""
             }`}
@@ -43,7 +44,7 @@ const ToyCategory = () => {
           <div
             onClick={() => handleTabClick("Transformers")}
             className={`card h-56 bg-primary text-white flex-col items-center relative mb-5 w-40 rounded-xl  text-2xl  border-4  border-primary Avenger ${
-              activeTab == "Transformers"
+              category == "Transformers"
                 ? " border-warning bg-warning  text-gray-800"
                 : ""
             }`}
@@ -59,9 +60,9 @@ const ToyCategory = () => {
             </button>
           </div>
           <div
-            onClick={() => handleTabClick("Star Wars")}
+            onClick={() => handleTabClick("Star wars")}
             className={`card h-56 bg-primary text-white flex-col items-center relative mb-5 w-40 rounded-xl  text-2xl  border-4  border-primary Avenger ${
-              activeTab == "Star Wars"
+              category == "Star wars"
                 ? " border-warning bg-warning  text-gray-800"
                 : ""
             }`}
@@ -73,7 +74,7 @@ const ToyCategory = () => {
             />
 
             <button className="font-bold mx-auto rounded-none  m-2 ">
-              Star Wars
+              Star wars
             </button>
           </div>
         </div>
