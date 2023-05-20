@@ -5,10 +5,10 @@ import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
 
 const UpdateToy = () => {
-  const [toys, setToys] = useState([]);
+  const [toys, setToys] = useState({});
   const { user } = useContext(AuthContext);
-  console.log(user);
-  console.log(toys);
+
+  console.log(toys[0].title);
   const {
     register,
     handleSubmit,
@@ -53,13 +53,15 @@ const UpdateToy = () => {
               {errors.exampleRequired && <span>This field is required</span>}
               <div className="grid grid-cols-[4fr_1fr]">
                 <input
-                  className=" pl-5 h-14 rounded-md mr-5   mb-5"
+                  className=" pl-5 h-14 rounded-md mr-5  text-black mb-5"
+                  defaultValue={toys[0].title}
                   {...register("title")}
                   placeholder="Toy name"
                 />
 
                 <input
                   className=" pl-5 h-14 rounded-md  "
+                  defaultValue={toys[0].price}
                   {...register("price", { required: true })}
                   placeholder="Price"
                   type="number"
@@ -68,12 +70,14 @@ const UpdateToy = () => {
               <div className="grid grid-cols-3 w-full">
                 <input
                   className=" pl-5  rounded-md  mr-5 h-14"
+                  defaultValue={toys[0].ratings}
                   {...register("ratings", { required: true })}
                   placeholder="Ratings"
                   type="text"
                 />
                 <input
                   className="pl-5 h-14 rounded-md  mr-5 mb-5"
+                  defaultValue={toys.quantity}
                   {...register("quantity")}
                   placeholder="Available quantity"
                   type="number"
