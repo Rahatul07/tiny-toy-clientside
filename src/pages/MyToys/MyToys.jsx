@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+
 // import UpdateToy from "../UpdateToy/UpdateToy";
 // import { Link } from "react-router-dom";
 
@@ -9,6 +10,7 @@ const MyToys = () => {
   const [toys, setToys] = useState([]);
   // const [modalShow, setModalShow] = React.useState(false);
   // const [control, setControl] = useState(false);
+
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
@@ -43,20 +45,7 @@ const MyToys = () => {
       }
     });
   };
-  const handleUpdate = (data) => {
-    fetch(`https://tiny-toy-server.vercel.app/toys/${data._id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result);
-        if (result.modifiedCount > 0) {
-          setToys(result);
-        }
-      });
-  };
+
   return (
     <div>
       <h1 className="my-10 text-5xl text-white font-bold text-center">
@@ -88,12 +77,7 @@ const MyToys = () => {
                   <td className="text-center">{toy.quantity}</td>
                   <td>
                     <Link to={`/updateDetails/${toy._id}`}>
-                      <button
-                        className="btn btn-primary"
-                        onClick={() => handleUpdate(toy._id)}
-                      >
-                        Edit
-                      </button>
+                      <button className="btn btn-primary">Edit</button>
                     </Link>
                   </td>
                   <td>

@@ -1,15 +1,38 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthProvider";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { useParams } from "react-router-dom";
 
-const UpdateToy = ({ toy }) => {
+const UpdateToy = () => {
+  // const [toys, setToys] = useState([]);
   const { user } = useContext(AuthContext);
-  console.log(toy);
+  // console.log(toys);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const { id } = useParams();
+
+  const onSubmit = (data) => {
+    fetch(`https://tiny-toy-server.vercel.app/toys/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        if (result.modifiedCount > 0) {
+          Swal.fire({
+            icon: "success",
+            title: "Successful",
+            text: "Toy has been updated successfully!",
+          });
+        }
+      });
+  };
 
   return (
     <div>
@@ -19,11 +42,11 @@ const UpdateToy = ({ toy }) => {
       <div className=" my-10 w-10/12 mx-auto">
         <div className="">
           <div className="w-10/12 mx-auto">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)}>
               {errors.exampleRequired && <span>This field is required</span>}
               <div className="grid grid-cols-[4fr_1fr]">
                 <input
-                  className=" pl-5 h-14 rounded-md mr-5   mb-5"
+                  className=" pl-5 h-14 rounded-md mr-5 border-4 border-success   mb-5"
                   {...register("title")}
                   placeholder="Toy name"
                 />
@@ -95,7 +118,7 @@ const UpdateToy = ({ toy }) => {
               <div className="grid grid-cols-1">
                 <input
                   className="btn btn-warning "
-                  value="Post Toy"
+                  value="Update Toy"
                   type="submit"
                 />
               </div>
