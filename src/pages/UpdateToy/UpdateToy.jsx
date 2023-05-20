@@ -1,18 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthProvider";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
 
 const UpdateToy = () => {
-  // const [toys, setToys] = useState([]);
+  const [toys, setToys] = useState([]);
   const { user } = useContext(AuthContext);
-  // console.log(toys);
+  console.log(user);
+  console.log(toys);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  useEffect(() => {
+    fetch("https://tiny-toy-server.vercel.app/toys")
+      .then((res) => res.json())
+      .then((data) => setToys(data));
+  }, []);
   const { id } = useParams();
 
   const onSubmit = (data) => {
@@ -46,7 +53,7 @@ const UpdateToy = () => {
               {errors.exampleRequired && <span>This field is required</span>}
               <div className="grid grid-cols-[4fr_1fr]">
                 <input
-                  className=" pl-5 h-14 rounded-md mr-5 border-4 border-success   mb-5"
+                  className=" pl-5 h-14 rounded-md mr-5   mb-5"
                   {...register("title")}
                   placeholder="Toy name"
                 />
@@ -73,6 +80,7 @@ const UpdateToy = () => {
                 />
                 <select
                   className=" pl-5 h-14 rounded-md  mb-5 text-gray-400 "
+                  defaultValue={toys.category}
                   {...register("category")}
                 >
                   <option value="Avengers">Avengers</option>
@@ -93,14 +101,14 @@ const UpdateToy = () => {
               <div className="grid grid-cols-2">
                 {" "}
                 <input
-                  className="pl-5 h-14 rounded-md  mr-5 mb-5 text-gray-400"
+                  className="pl-5 h-14 rounded-md  mr-5 mb-5 text-black"
                   value={user?.displayName}
                   {...register("sellerName")}
                   placeholder="Your name"
                   type="text"
                 />
                 <input
-                  className="pl-5 h-14 rounded-md   mb-5 text-gray-400"
+                  className="pl-5 h-14 rounded-md   mb-5 text-black"
                   value={user?.email}
                   {...register("sellerEmail")}
                   placeholder="Your email"
