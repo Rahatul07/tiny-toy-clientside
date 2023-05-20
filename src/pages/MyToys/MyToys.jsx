@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthProvider";
 import Swal from "sweetalert2";
-import UpdateToy from "../UpdateToy/UpdateToy";
+import { Link } from "react-router-dom";
+// import UpdateToy from "../UpdateToy/UpdateToy";
+// import { Link } from "react-router-dom";
 
 const MyToys = () => {
   const [toys, setToys] = useState([]);
-  const [modalShow, setModalShow] = React.useState(false);
-  const [control, setControl] = useState(false);
+  // const [modalShow, setModalShow] = React.useState(false);
+  // const [control, setControl] = useState(false);
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
@@ -42,7 +44,6 @@ const MyToys = () => {
     });
   };
   const handleUpdate = (data) => {
-    console.log(data);
     fetch(`https://tiny-toy-server.vercel.app/toys/${data._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -52,11 +53,10 @@ const MyToys = () => {
       .then((result) => {
         console.log(result);
         if (result.modifiedCount > 0) {
-          setControl(!control);
+          setToys(result);
         }
       });
   };
-
   return (
     <div>
       <h1 className="my-10 text-5xl text-white font-bold text-center">
@@ -87,18 +87,14 @@ const MyToys = () => {
                   <td className="text-center">{toy.price}</td>
                   <td className="text-center">{toy.quantity}</td>
                   <td>
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => setModalShow(true)}
-                    >
-                      Edit
-                    </button>
-                    <UpdateToy
-                      show={modalShow}
-                      onHide={() => setModalShow(false)}
-                      toy={toy}
-                      handleUpdate={handleUpdate}
-                    />
+                    <Link to={`/updateDetails/${toy._id}`}>
+                      <button
+                        className="btn btn-primary"
+                        onClick={() => handleUpdate(toy._id)}
+                      >
+                        Edit
+                      </button>
+                    </Link>
                   </td>
                   <td>
                     <button

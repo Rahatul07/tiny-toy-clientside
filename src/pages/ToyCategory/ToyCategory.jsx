@@ -16,24 +16,24 @@ const ToyCategory = () => {
   const handleTabClick = (tabName) => {
     setCategory(tabName);
   };
-  console.log(toys);
+
   return (
     <div>
       <div className=" p-5">
         <h1 className="text-center p-5 text-white text-5xl font-bold pb-5">
           Category
         </h1>
-        <div className=" w-10/12  mx-auto my-10  md:flex justify-between">
+        <div className=" w-6/12   mx-auto my-10  lg:flex  justify-between">
           <div
             onClick={() => handleTabClick("Avengers")}
-            className={`card h-56 bg-primary text-white flex-col items-center relative mb-5 w-40 rounded-xl  text-2xl  border-4  border-primary Avenger ${
+            className={`card  bg-primary text-white flex-col items-center relative mb-20 w-56 mx-auto h-80  lg:h-56 lg:w-40   rounded-xl text-4xl lg:text-2xl  border-4  border-primary  ${
               category == "Avengers"
                 ? " border-warning bg-warning  text-gray-800"
                 : ""
             }`}
           >
             <img
-              className="h-40 w-full btn bg-white border-none hover:bg-white "
+              className="h-60 lg:h-40 w-full btn bg-white border-none hover:bg-white "
               src={category1}
               alt=""
             />
@@ -44,14 +44,14 @@ const ToyCategory = () => {
           </div>
           <div
             onClick={() => handleTabClick("Transformers")}
-            className={`card h-56 bg-primary text-white flex-col items-center relative mb-5 w-40 rounded-xl  text-2xl  border-4  border-primary Avenger ${
+            className={`card  bg-primary text-white flex-col items-center relative mb-20 w-56 mx-auto h-80  lg:h-56 lg:w-40   rounded-xl text-3xl lg:text-2xl  border-4  border-primary ${
               category == "Transformers"
                 ? " border-warning bg-warning  text-gray-800"
                 : ""
             }`}
           >
             <img
-              className="h-40 w-full btn bg-white border-none hover:bg-white "
+              className="h-60 lg:h-40 w-full btn bg-white border-none hover:bg-white  "
               src={category2}
               alt=""
             />
@@ -62,14 +62,14 @@ const ToyCategory = () => {
           </div>
           <div
             onClick={() => handleTabClick("Star wars")}
-            className={`card h-56 bg-primary text-white flex-col items-center relative mb-5 w-40 rounded-xl  text-2xl  border-4  border-primary Avenger ${
+            className={`card  bg-primary text-white flex-col items-center relative mb-20 w-56 mx-auto h-80  lg:h-56 lg:w-40   rounded-xl text-4xl lg:text-2xl  border-4  border-primary ${
               category == "Star wars"
-                ? " border-warning bg-warning  text-gray-800"
+                ? " border-warning bg-warning  text-black"
                 : ""
             }`}
           >
             <img
-              className="h-40 w-full btn bg-white border-none hover:bg-white "
+              className="h-60 lg:h-40 w-full btn  bg-white border-none hover:bg-white  "
               src={category3}
               alt=""
             />
@@ -81,8 +81,7 @@ const ToyCategory = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {toys &&
-          toys.map((toy) => <CategoryDetails key={toy._key} toy={toy} />)}
+        {toys && toys.map((toy) => <CategoryDetails key={toy._id} toy={toy} />)}
       </div>
     </div>
   );
