@@ -95,6 +95,7 @@ const UpdateToy = () => {
               <div className="grid grid-cols-1">
                 <input
                   className=" pl-5 h-14 rounded-md  mb-5"
+                  defaultValue={toy?.image}
                   {...register("image")}
                   placeholder="Image link"
                   type="url"
@@ -122,6 +123,7 @@ const UpdateToy = () => {
               <div className="grid grid-cols-1">
                 <input
                   className="pl-5 h-14 rounded-md   mb-5 "
+                  defaultValue={toy?.description}
                   {...register("description")}
                   placeholder="Description"
                 />
