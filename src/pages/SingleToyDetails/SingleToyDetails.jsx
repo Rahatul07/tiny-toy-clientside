@@ -11,7 +11,7 @@ const SingleToyDetails = () => {
       .then((res) => res.json())
       .then((data) => setToy(data));
   }, [id]);
-  console.log(toy);
+
   return (
     <div
       className="card w-8/12 my-20 mx-auto  shadow-xl"

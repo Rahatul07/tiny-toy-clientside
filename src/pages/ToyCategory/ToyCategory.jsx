@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import category1 from "../../../src/assets/single-toy-images/avengers/category-avenger.png";
 import category2 from "../../../src/assets/single-toy-images/transformers/category-transformer.png";
 import category3 from "../../../src/assets/single-toy-images/Star wars/category-star-wars.png";
+import CategoryDetails from "../CategoryDetails/CategoryDetails";
 const ToyCategory = () => {
   const [toys, setToys] = useState([]);
   const [category, setCategory] = useState("Star wars");
@@ -78,6 +79,10 @@ const ToyCategory = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {toys &&
+          toys.map((toy) => <CategoryDetails key={toy._key} toy={toy} />)}
       </div>
     </div>
   );
