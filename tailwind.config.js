@@ -21,7 +21,7 @@ export default {
 
           warning: "#FBBD23",
 
-          error: "#F87272",
+          error: "#FF0000",
         },
       },
     ],

@@ -55,7 +55,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/singleToyDetails/:id",
-        element: <SingleToyDetails />,
+        element: (
+          <PrivateRoute>
+            <SingleToyDetails />
+          </PrivateRoute>
+        ),
       },
     ],
   },

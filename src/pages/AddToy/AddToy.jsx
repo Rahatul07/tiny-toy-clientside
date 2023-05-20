@@ -27,6 +27,7 @@ const AddToy = () => {
           title: "Successful!",
           text: "A new toy has been added successfully!",
         });
+        useForm.reset();
       });
     console.log(data);
   };
