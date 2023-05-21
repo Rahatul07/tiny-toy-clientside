@@ -28,7 +28,7 @@ const Testimonials = () => {
                 <span>CEO</span>
               </p>
             </div>
-            <div className="absolute md:-bottom-14 mx-auto w-full">
+            <div className="absolute  md:-bottom-14 mx-auto w-full">
               <TestimonialDetails />
             </div>
           </div>

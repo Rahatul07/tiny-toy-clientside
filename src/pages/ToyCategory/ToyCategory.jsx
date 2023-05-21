@@ -17,7 +17,10 @@ const ToyCategory = () => {
   const handleTabClick = (tabName) => {
     setCategory(tabName);
   };
-
+  const [showAll, setShowAll] = useState(false);
+  const handleShowAll = () => {
+    setShowAll(true);
+  };
   return (
     <LazyLoad>
       <div>
@@ -81,7 +84,21 @@ const ToyCategory = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {toys &&
-            toys.map((toy) => <CategoryDetails key={toy._id} toy={toy} />)}
+            toys
+              .slice(0, showAll ? 12 : 3)
+              .map((toy) => <CategoryDetails key={toy._id} toy={toy} />)}
+        </div>
+        <div className="  flex justify-center mb-5">
+          <span>
+            {!showAll && (
+              <button
+                onClick={handleShowAll}
+                className="btn btn-warning   mt-5"
+              >
+                Show All
+              </button>
+            )}
+          </span>
         </div>
       </div>
     </LazyLoad>

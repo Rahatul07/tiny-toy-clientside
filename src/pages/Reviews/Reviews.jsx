@@ -35,7 +35,7 @@ const Reviews = () => {
       className="my-24"
       data-aos="fade-up"
       data-aos-offset="200"
-      data-aos-duration="700"
+      data-aos-duration="400"
       data-aos-easing="ease-in-out"
       data-aos-mirror="true"
       data-aos-once="false"
