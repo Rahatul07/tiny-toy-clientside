@@ -4,12 +4,12 @@ const Banner = () => {
   return (
     <div>
       <div
-        className="h-96 w-auto bg-cover  pb-24 mt-36 mb-28 text-center"
+        className="h-96 w-auto bg-cover  pb-10 mt-20 mb-28 text-center"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(${coverImage})`,
         }}
       >
-        <h1 className="text-white uppercase  text-center font-bold  pt-24 text-xl">
+        <h1 className="text-white uppercase  text-center font-bold pt-5 lg:pt-10 text-xl">
           SUPER SALE
         </h1>
         <h1 className="uppercase text-warning text-center font-bold  pt-2 text-7xl">

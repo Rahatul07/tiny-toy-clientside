@@ -23,7 +23,7 @@ const Testimonials = () => {
               consumer skepticism.
             </p>
             <p className="text-gray-300 bg-black bg-opacity-50 text-center w-2/12 mx-auto mt-3 text-lg">
-              Devid Luice <br />
+              Devid Warner <br />
               <span>CEO</span>
             </p>
           </div>

@@ -19,62 +19,59 @@ const ToyCategory = () => {
 
   return (
     <div>
-      <div className=" p-5">
-        <h1 className="text-center p-5 text-white text-5xl font-bold pb-5">
-          Category
-        </h1>
-        <div className=" w-6/12   mx-auto my-10  lg:flex  justify-between">
+      <div className=" p-5 -mt-48 md:-mt-60">
+        <div className="w-10/12 lg:w-6/12   mx-auto mt-10  flex gap-5  justify-between">
           <div
             onClick={() => handleTabClick("Avengers")}
-            className={`card  bg-primary text-white flex-col items-center relative mb-20 w-56 mx-auto h-80  lg:h-56 lg:w-40   rounded-xl text-4xl lg:text-2xl  border-4  border-primary  ${
+            className={`card  bg-primary text-white flex-col items-center relative mb-20  w-32 md:w-36 lg:w-40 mx-auto h-32 md:h-44  lg:h-56    rounded-xl  md:text-2xl lg:text-2xl  border-4  border-primary  ${
               category == "Avengers"
                 ? " border-warning bg-warning  text-gray-800"
                 : ""
             }`}
           >
             <img
-              className="h-60 lg:h-40 w-full btn bg-white border-none hover:bg-white "
+              className="h-24 md:h-32 lg:h-40  btn bg-white border-none hover:bg-white "
               src={category1}
               alt=""
             />
 
-            <button className="font-bold mx-auto rounded-none  m-2 ">
+            <button className="font-bold md:mx-auto rounded-none  mx-2 ">
               Avengers
             </button>
           </div>
           <div
             onClick={() => handleTabClick("Transformers")}
-            className={`card  bg-primary text-white flex-col items-center relative mb-20 w-56 mx-auto h-80  lg:h-56 lg:w-40   rounded-xl text-3xl lg:text-2xl  border-4  border-primary ${
+            className={`card  bg-primary text-white flex-col items-center relative mb-20  w-32 md:w-36 lg:w-40 mx-auto h-32 md:h-44  lg:h-56    rounded-xl  md:text-2xl lg:text-2xl  border-4  border-primary ${
               category == "Transformers"
                 ? " border-warning bg-warning  text-gray-800"
                 : ""
             }`}
           >
             <img
-              className="h-60 lg:h-40 w-full btn bg-white border-none hover:bg-white  "
+              className="h-24 md:h-32 lg:h-40  btn bg-white border-none hover:bg-white"
               src={category2}
               alt=""
             />
 
-            <button className="font-bold mx-auto rounded-none  m-2 ">
+            <button className="font-bold md:mx-auto rounded-none  ">
               Transformers
             </button>
           </div>
           <div
             onClick={() => handleTabClick("Star wars")}
-            className={`card  bg-primary text-white flex-col items-center relative mb-20 w-56 mx-auto h-80  lg:h-56 lg:w-40   rounded-xl text-4xl lg:text-2xl  border-4  border-primary ${
+            className={`card  bg-primary text-white flex-col items-center relative mb-20  w-32 md:w-36 lg:w-40 mx-auto h-32 md:h-44  lg:h-56    rounded-xl  md:text-2xl lg:text-2xl  border-4  border-primary ${
               category == "Star wars"
                 ? " border-warning bg-warning  text-black"
                 : ""
             }`}
           >
             <img
-              className="h-60 lg:h-40 w-full btn  bg-white border-none hover:bg-white  "
+              className="h-24 md:h-32 lg:h-40  btn bg-white border-none hover:bg-white"
               src={category3}
               alt=""
             />
 
-            <button className="font-bold mx-auto rounded-none  m-2 ">
+            <button className="font-bold md:mx-auto rounded-none  mx-2">
               Star wars
             </button>
           </div>
