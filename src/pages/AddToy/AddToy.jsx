@@ -4,8 +4,10 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
 import { AuthContext } from "../../contexts/AuthProvider";
+import { useTitle } from "../../components/hooks/useTitle";
 
 const AddToy = () => {
+  useTitle("Add toys");
   const { user } = useContext(AuthContext);
 
   const {
@@ -29,7 +31,6 @@ const AddToy = () => {
         });
         useForm.reset();
       });
-    console.log(data);
   };
 
   return (

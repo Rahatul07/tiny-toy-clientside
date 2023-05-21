@@ -1,6 +1,8 @@
 import React from "react";
+import { useTitle } from "../../components/hooks/useTitle";
 
 const Blogs = () => {
+  useTitle("Blogs");
   return (
     <div className="w-10/12 mx-auto">
       <h1 className="text-5xl font-bold text-white mx-auto text-center py-10">
@@ -68,7 +70,7 @@ const Blogs = () => {
             aggregate and how does it work?
           </h1>
           <h1 className="text-white bg-black bg-opacity-20 p-2">
-            <strong className="text-warning">A-4:</strong>
+            <strong className="text-warning">A-4: </strong>
             MongoDBs aggregate is a powerful framework that allows you to
             perform advanced data analysis operations on MongoDB collections. It
             enables you to process and transform data using a pipeline of

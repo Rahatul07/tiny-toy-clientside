@@ -4,8 +4,10 @@ import Gallery from "../../Gallery/Gallery";
 import ToyCategory from "../../ToyCategory/ToyCategory";
 import Banner from "../Banner/Banner";
 import Testimonials from "../Testimonials/Testimonials";
+import { useTitle } from "../../../components/hooks/useTitle";
 
 const Home = () => {
+  useTitle("Home");
   return (
     <div>
       <Body />

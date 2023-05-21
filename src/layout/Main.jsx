@@ -14,6 +14,7 @@ const Main = () => {
       <div className="z-10">
         <Header />
       </div>
+
       <div className="md:min-h-[calc(100vh-341px)] z-20">
         <Outlet />
       </div>

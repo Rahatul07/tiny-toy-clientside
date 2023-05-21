@@ -5,8 +5,10 @@ import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../contexts/AuthProvider";
+import { useTitle } from "../../components/hooks/useTitle";
 
 const Login = () => {
+  useTitle("Login");
   const emailRef = useRef();
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [error, setError] = useState("");

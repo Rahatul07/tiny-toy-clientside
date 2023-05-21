@@ -3,11 +3,12 @@ import { AuthContext } from "../../contexts/AuthProvider";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
+import { useTitle } from "../../components/hooks/useTitle";
 
 const UpdateToy = () => {
+  useTitle("Update a toy");
   const [toy, setToy] = useState({});
   const { user } = useContext(AuthContext);
-  console.log(toy);
 
   const {
     register,
@@ -61,7 +62,7 @@ const UpdateToy = () => {
                 <input
                   className=" pl-5 h-14 rounded-md  "
                   defaultValue={toy.price}
-                  {...register("price", { required: true })}
+                  {...register("price", { required: false })}
                   placeholder="Price"
                   type="number"
                 />
@@ -70,7 +71,7 @@ const UpdateToy = () => {
                 <input
                   className=" pl-5  rounded-md  mr-5 h-14"
                   defaultValue={toy.ratings}
-                  {...register("ratings", { required: true })}
+                  {...register("ratings", { required: false })}
                   placeholder="Ratings"
                   type="text"
                 />
