@@ -10,7 +10,6 @@ import LazyLoad from "react-lazy-load";
 const Body = () => {
   return (
     <LazyLoad>
-      {" "}
       <div className=" ">
         <div className="h-screen mb-10  top-0 -mt-0 2xl:-mt-2">
           <Carousel>

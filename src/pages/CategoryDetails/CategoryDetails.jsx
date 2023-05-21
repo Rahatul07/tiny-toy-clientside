@@ -11,7 +11,7 @@ const CategoryDetails = ({ toy }) => {
         backgroundImage: `linear-gradient(to right,   rgba(120, 0, 260, 0.8),rgba(100, 1, 254, 0.2))`,
       }}
     >
-      <figure className="px-10 pt-10  h-fit">
+      <figure className="px-4 pt-4  h-fit">
         <img src={toy.image} alt="Shoes" className="rounded-lg" />
       </figure>
       <div className="card-body pl-10 text-white">

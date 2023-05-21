@@ -14,8 +14,8 @@ const Banner = () => {
           <h1 className="text-white uppercase  text-center font-bold pt-5 lg:pt-10 text-xl">
             SUPER SALE
           </h1>
-          <h1 className="uppercase text-warning text-center font-bold  pt-2 text-7xl">
-            Up to 50%
+          <h1 className="uppercase text-warning text-center font-bold  pt-2 text-5xl">
+            Up to 50% on these three category
           </h1>
           <p className="text-gray-300 bg-black bg-opacity-50 text-center w-8/12 mx-auto mt-3 text-lg">
             Lorem Khaled Ipsum is a major key to success. Always remember in the
