@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className=" mx-auto  px-10 bg-primary  shadow-md shadow-slate-800 ">
+      <div className=" mx-auto  px-10 bg-primary bg-opacity-25 shadow-md shadow-slate-800 ">
         <div className="navbar   text-white ">
           <div className="navbar-start">
             <img className="h-14 w-20 " src={logo} alt="" />
