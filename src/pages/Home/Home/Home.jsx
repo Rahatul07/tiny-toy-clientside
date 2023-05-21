@@ -13,7 +13,6 @@ const Home = () => {
     <div>
       <Body />
       <Gallery />
-
       <Banner />
       <ToyCategory />
       <Testimonials />

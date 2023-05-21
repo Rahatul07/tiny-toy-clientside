@@ -38,7 +38,7 @@ const Gallery = () => {
   return (
     <LazyLoad>
       <div
-        className="my-24"
+        className="mt-0 mb-24 md:my-24"
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-duration="700"

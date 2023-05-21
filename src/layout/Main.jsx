@@ -11,11 +11,9 @@ const Main = () => {
         backgroundImage: `linear-gradient(to right, rgba(116, 44, 254, 0.9), rgba(151, 44, 154, 0.4))`,
       }}
     >
-      <div className="z-10">
-        <Header />
-      </div>
+      <Header />
 
-      <div className="md:min-h-[calc(100vh-341px)] z-20">
+      <div className="md:min-h-[calc(100vh-341px)] ">
         <Outlet />
       </div>
       <Footer />

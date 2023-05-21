@@ -10,15 +10,13 @@ import LazyLoad from "react-lazy-load";
 const Body = () => {
   return (
     <LazyLoad>
-      <div className=" ">
-        <div className="h-screen mb-10  top-0 -mt-0 2xl:-mt-2">
-          <Carousel>
-            <img src={carouselImage1} alt="..." />
-            <img src={carouselImage2} alt="..." />
-            <img src={carouselImage3} alt="..." />
-            <img src={carouselImage4} alt="..." />
-          </Carousel>
-        </div>
+      <div className="h-screen md:mb-10   -mt-44 md:-mt-16 2xl:-mt-2">
+        <Carousel>
+          <img src={carouselImage1} alt="..." />
+          <img src={carouselImage2} alt="..." />
+          <img src={carouselImage3} alt="..." />
+          <img src={carouselImage4} alt="..." />
+        </Carousel>
       </div>
     </LazyLoad>
   );
