@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className=" mx-auto  px-10 bg-primary bg-opacity-25 shadow-md shadow-slate-800 ">
+      <div className=" mx-auto h-20 px-10 bg-primary  shadow-md shadow-slate-800 ">
         <div className="navbar   text-white ">
           <div className="navbar-start">
             <img className="h-14 w-20 " src={logo} alt="" />
@@ -157,7 +157,7 @@ const Header = () => {
             {isMenuOpen && (
               <div className="absolute z-10 top-0 left-0 border-2 border-primary  w-full">
                 <div className="p-5   bg-gray-700 rounded shadow-sm">
-                  <div className="flex items-center  justify-between mb-4">
+                  <div className="flex items-center  justify-between ">
                     <div>
                       <div className="navbar-start ">
                         <img className="h-14 w-20 ml-40" src={logo} alt="" />
@@ -177,12 +177,12 @@ const Header = () => {
                   <nav>
                     <div className="text-xl  uppercase h-full pr-10 navbar-center bg-gray-700  ">
                       <ul className="pl-3  px-1 ">
-                        <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                        <li className="ml-5   hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                           <NavLink to="/" aria-label="Home" title="Home">
                             Home
                           </NavLink>
                         </li>
-                        <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                        <li className="ml-5  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                           <NavLink
                             to="/allToys"
                             aria-label="all-toys"
@@ -191,7 +191,7 @@ const Header = () => {
                             All Toys
                           </NavLink>
                         </li>
-                        <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                        <li className="ml-5   hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                           <NavLink
                             to="/addToy"
                             aria-label="add-toy"
@@ -200,14 +200,14 @@ const Header = () => {
                             Add Toy
                           </NavLink>
                         </li>
-                        <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                        <li className="ml-5   hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                           <NavLink to="/blogs" aria-label="blogs" title="blogs">
                             Blogs
                           </NavLink>
                         </li>
                         {user ? (
                           <>
-                            <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                            <li className="ml-5   hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                               <NavLink
                                 to="/myToys"
                                 aria-label="my-toys"
@@ -216,7 +216,7 @@ const Header = () => {
                                 My Toys
                               </NavLink>
                             </li>
-                            <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                            <li className="ml-5   hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                               <NavLink
                                 aria-label="logOut"
                                 title="logOut"
@@ -231,7 +231,7 @@ const Header = () => {
                           </>
                         ) : (
                           <>
-                            <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                            <li className="ml-5   hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                               <NavLink
                                 to="/login"
                                 aria-label="login"
@@ -240,7 +240,7 @@ const Header = () => {
                                 LogIn
                               </NavLink>
                             </li>
-                            <li className="ml-5 mb-3  hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
+                            <li className="ml-5   hover:border-2 border-primary hover:bg-primary hover:bg-opacity-30 px-5 py-3 rounded-xl  ">
                               <NavLink
                                 to="/register"
                                 aria-label="register"

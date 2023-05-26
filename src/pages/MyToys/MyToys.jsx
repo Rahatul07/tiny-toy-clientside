@@ -45,8 +45,11 @@ const MyToys = () => {
 
   return (
     <div>
-      <h1 className="my-10 text-5xl text-white font-bold text-center">
-        My Toys
+      <h1
+        style={{ fontFamily: "'Montserrat', cursive" }}
+        className="text-5xl md:text-7xl mb-5 font-bold text-primary mt-10 text-center pb-5 "
+      >
+        MY TOYS
       </h1>
 
       <div className="overflow-x-auto my-10  mx-auto ">

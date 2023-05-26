@@ -104,7 +104,6 @@ const UpdateToy = () => {
               </div>
 
               <div className="grid grid-cols-2">
-                {" "}
                 <input
                   className="pl-5 h-14 rounded-md  mr-5 mb-5 text-black"
                   value={user?.displayName}

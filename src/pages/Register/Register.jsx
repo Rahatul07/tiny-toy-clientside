@@ -105,8 +105,11 @@ const Register = () => {
       <div className="hero min-h-screen  mb-20">
         <div className="hero-content flex-col ">
           <div className="text-center ">
-            <h1 className="text-5xl font-bold  text-white my-5">
-              Please Register now!
+            <h1
+              style={{ fontFamily: "'Montserrat', cursive" }}
+              className="text-5xl  mb-5 font-bold text-primary mt-10 text-center pb-5 "
+            >
+              PLEASE REGISTER NOW!
             </h1>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  glass">

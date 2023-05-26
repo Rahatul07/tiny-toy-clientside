@@ -6,7 +6,7 @@ import CategoryDetails from "../CategoryDetails/CategoryDetails";
 import LazyLoad from "react-lazy-load";
 const ToyCategory = () => {
   const [toys, setToys] = useState([]);
-  const [category, setCategory] = useState("Star wars");
+  const [category, setCategory] = useState("Avengers");
   useEffect(() => {
     fetch(`https://tiny-toy-server.vercel.app/toys?category=${category}`)
       .then((res) => res.json())
@@ -93,7 +93,7 @@ const ToyCategory = () => {
             {!showAll && (
               <button
                 onClick={handleShowAll}
-                className="btn btn-warning   mt-5"
+                className="btn btn-primary   mt-5"
               >
                 Show All
               </button>

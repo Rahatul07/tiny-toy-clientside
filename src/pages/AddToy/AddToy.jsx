@@ -35,8 +35,11 @@ const AddToy = () => {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-white text-center mt-5">
-        Add A Toy
+      <h1
+        style={{ fontFamily: "'Montserrat', cursive" }}
+        className="text-5xl md:text-7xl mb-5 font-bold text-primary mt-10 text-center"
+      >
+        ADD A TOY
       </h1>
       <div className=" my-10 w-10/12 mx-auto">
         <div className="">
@@ -90,7 +93,6 @@ const AddToy = () => {
               </div>
 
               <div className="grid grid-cols-2">
-                {" "}
                 <input
                   className="pl-5 h-14 rounded-md  mr-5 mb-5 text-gray-400"
                   value={user?.displayName}
@@ -116,7 +118,7 @@ const AddToy = () => {
               </div>
               <div className="grid grid-cols-1">
                 <input
-                  className="btn btn-warning "
+                  className="btn btn-primary "
                   value="Post Toy"
                   type="submit"
                 />

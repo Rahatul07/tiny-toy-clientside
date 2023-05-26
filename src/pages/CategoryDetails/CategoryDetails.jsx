@@ -27,21 +27,17 @@ AOS.refresh();
 const CategoryDetails = ({ toy }) => {
   return (
     <div
-      className="card w-10/12  mx-auto  shadow-lg mb-10 relative"
-      style={{
-        backgroundImage: `linear-gradient(to right,   rgba(120, 0, 260, 0.8),rgba(100, 1, 254, 0.2))`,
-      }}
+      className="card w-10/12  mx-auto bg-primary  shadow-lg mb-10 relative"
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-duration="400"
       data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
       data-aos-once="false"
     >
       <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 ">
         <div className="h-full   w-auto">
           <img
-            className="h-fit w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125 px-4 pt-4 "
+            className="h-fit w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125 px-2 pt-2 rounded-2xl "
             src={toy.image}
             alt=""
           />

@@ -10,7 +10,7 @@ import LazyLoad from "react-lazy-load";
 const Body = () => {
   return (
     <LazyLoad>
-      <div className="h-screen md:mb-10   -mt-44 md:-mt-16 2xl:-mt-2">
+      <div className="h-screen mb-10 2xl:-mt-2 ">
         <Carousel>
           <img src={carouselImage1} alt="..." />
           <img src={carouselImage2} alt="..." />

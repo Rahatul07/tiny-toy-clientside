@@ -43,12 +43,19 @@ const Gallery = () => {
         data-aos-offset="200"
         data-aos-duration="400"
         data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
         data-aos-once="false"
       >
         <div className="text-center">
-          <h1 className="text-5xl mb-5 font-bold text-white">Core features</h1>
-          <p className="mb-10 w-8/12 mx-auto text-white">
+          <h1
+            style={{ fontFamily: "'Montserrat', cursive" }}
+            className="text-5xl md:text-7xl mb-5 font-bold text-primary"
+          >
+            Core features
+          </h1>
+          <p
+            className="mb-10 w-8/12 text-xl mx-auto text-gray-500"
+            style={{ fontFamily: "'Satisfy', cursive" }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
             voluptatum magni consectetur molestias sapiente hic illo quis ea eum
             alias iure sit saepe error distinctio tenetur non nostrum, maxime
@@ -60,7 +67,7 @@ const Gallery = () => {
         </div>
         <div className=" mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           <Tilt>
-            <div className="h-full border-8 border-primary  w-auto">
+            <div className="h-full border-4 border-primary  w-auto">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src={img1}
@@ -69,7 +76,7 @@ const Gallery = () => {
             </div>
           </Tilt>
           <Tilt>
-            <div className="h-full border-8 border-primary  w-auto">
+            <div className="h-full border-4 border-primary  w-auto">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src={img2}
@@ -78,7 +85,7 @@ const Gallery = () => {
             </div>
           </Tilt>
           <Tilt>
-            <div className="h-full border-8 border-primary  w-auto">
+            <div className="h-full border-4 border-primary  w-auto">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src={img3}
@@ -87,7 +94,7 @@ const Gallery = () => {
             </div>
           </Tilt>
           <Tilt>
-            <div className="h-full border-8 border-primary  w-auto">
+            <div className="h-full border-4 border-primary  w-auto">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src={img4}
@@ -96,7 +103,7 @@ const Gallery = () => {
             </div>
           </Tilt>
           <Tilt>
-            <div className="h-full border-8 border-primary  w-auto">
+            <div className="h-full border-4 border-primary  w-auto">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src={img5}
@@ -105,7 +112,7 @@ const Gallery = () => {
             </div>
           </Tilt>
           <Tilt>
-            <div className="h-full border-8 border-primary  w-auto">
+            <div className="h-full border-4 border-primary  w-auto">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src={img6}
@@ -114,7 +121,7 @@ const Gallery = () => {
             </div>
           </Tilt>
           <Tilt>
-            <div className="h-full border-8 border-primary  w-auto">
+            <div className="h-full border-4 border-primary  w-auto">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src={img7}
@@ -123,7 +130,7 @@ const Gallery = () => {
             </div>
           </Tilt>
           <Tilt>
-            <div className="h-full border-8 border-primary  w-auto">
+            <div className="h-full border-4 border-primary  w-auto">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src={img8}

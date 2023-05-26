@@ -6,16 +6,13 @@ import Footer from "../components/shared/Footer/Footer";
 const Main = () => {
   return (
     <div
-      className=" "
-      style={{
-        backgroundImage: `linear-gradient(to right, rgba(116, 44, 254, 0.9), rgba(151, 44, 154, 0.4))`,
-      }}
+      className="bg-primary bg-opacity-10"
+      // style={{
+      //   backgroundImage: `linear-gradient(to right, rgba(116, 44, 254, 0.9), rgba(151, 44, 154, 0.4))`,
+      // }}
     >
       <Header />
-
-      <div className="md:min-h-[calc(100vh-341px)] ">
-        <Outlet />
-      </div>
+      <Outlet />
       <Footer />
     </div>
   );

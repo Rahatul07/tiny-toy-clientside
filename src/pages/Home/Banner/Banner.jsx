@@ -14,10 +14,16 @@ const Banner = () => {
           <h1 className="text-white uppercase  text-center font-bold pt-5 lg:pt-10 text-xl">
             SUPER SALE
           </h1>
-          <h1 className="uppercase text-warning text-center font-bold  pt-2 text-3xl md:text-5xl md:mx-10">
+          <h1
+            className="uppercase text-warning text-center font-bold  pt-2 text-3xl md:text-5xl md:mx-10"
+            style={{ fontFamily: "'Montserrat', cursive" }}
+          >
             Up to 50% on these three category
           </h1>
-          <p className="text-gray-300 bg-black bg-opacity-50 text-center w-8/12 mx-auto mt-3 text-lg">
+          <p
+            className="text-gray-300 bg-black bg-opacity-50 text-center w-8/12 mx-auto mt-3 text-xl"
+            style={{ fontFamily: "'Satisfy', cursive" }}
+          >
             Lorem Khaled Ipsum is a major key to success. Always remember in the
             jungle theres a lot of they in there, after you overcome they, you
             will make it to paradise. Bless up.

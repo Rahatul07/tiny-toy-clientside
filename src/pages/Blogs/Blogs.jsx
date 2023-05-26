@@ -5,19 +5,22 @@ const Blogs = () => {
   useTitle("Blogs");
   return (
     <div className="w-10/12 mx-auto">
-      <h1 className="text-5xl font-bold text-white mx-auto text-center py-10">
+      <h1
+        style={{ fontFamily: "'Montserrat', cursive" }}
+        className="text-5xl md:text-7xl mb-5 font-bold text-primary mt-10 text-center pb-5 "
+      >
         Some common FAQ<small>s</small>
       </h1>
 
       <div>
         <div className="mb-10">
-          <h1 className="text-black bg-warning  pl-2 text-xl font bold py-2">
-            <strong className="text-black">Q-1:</strong> What is an access token
+          <h1 className="text-white bg-primary  pl-2 text-xl font bold py-2">
+            <strong className="text-white">Q-1:</strong> What is an access token
             and refresh token? How do they work and where should we store them
             on the client-side?
           </h1>
-          <h1 className="text-white bg-black bg-opacity-20 p-2">
-            <strong className="text-warning">A-1:</strong> An access token is a
+          <h1 className="text-white bg-primary bg-opacity-50 p-2">
+            <strong className="text-primary">A-1:</strong> An access token is a
             credential for accessing protected resources, issued after user
             authentication. A refresh token is a long-lived credential used to
             obtain new access tokens. They work together, with the access token
@@ -28,12 +31,12 @@ const Blogs = () => {
           </h1>
         </div>
         <div className="mb-10">
-          <h1 className="text-black bg-warning  pl-2 text-xl font bold py-2">
-            <strong className="text-black">Q-2:</strong> What is the difference
+          <h1 className="text-white bg-primary  pl-2 text-xl font bold py-2">
+            <strong className="text-white">Q-2:</strong> What is the difference
             between SQL and NoSQL databases?
           </h1>
-          <h1 className="text-white bg-black bg-opacity-20 p-2">
-            <strong className="text-warning">A-2:</strong> SQL databases are
+          <h1 className="text-white bg-primary bg-opacity-50 p-2">
+            <strong className="text-primary">A-2:</strong> SQL databases are
             relational databases that store data in structured tables with
             predefined schemas and use structured query language (SQL) for
             querying and manipulating data. NoSQL databases, on the other hand,
@@ -44,12 +47,12 @@ const Blogs = () => {
           </h1>
         </div>
         <div className="mb-10">
-          <h1 className="text-black bg-warning  pl-2 text-xl font bold py-2">
-            <strong className="text-black">Q-3:</strong> What is express JS and
+          <h1 className="text-white bg-primary  pl-2 text-xl font bold py-2">
+            <strong className="text-white">Q-3:</strong> What is express JS and
             Nest JS? give a short description.
           </h1>
-          <h1 className="text-white bg-black bg-opacity-20 p-2">
-            <strong className="text-warning">A-3:</strong> Express.js is a
+          <h1 className="text-white bg-primary bg-opacity-50 p-2">
+            <strong className="text-primary">A-3:</strong> Express.js is a
             minimalist web application framework for Node.js, which provides a
             straightforward and flexible way to build web applications and APIs.
             It offers a lightweight and unopinionated approach, allowing
@@ -65,12 +68,12 @@ const Blogs = () => {
           </h1>
         </div>
         <div className="mb-10">
-          <h1 className="text-black bg-warning  pl-2 text-xl font bold py-2">
-            <strong className="text-black">Q-4:</strong> What is MongoDB
+          <h1 className="text-white bg-primary  pl-2 text-xl font bold py-2">
+            <strong className="text-white">Q-4:</strong> What is MongoDB
             aggregate and how does it work?
           </h1>
-          <h1 className="text-white bg-black bg-opacity-20 p-2">
-            <strong className="text-warning">A-4: </strong>
+          <h1 className="text-white bg-primary bg-opacity-50 p-2">
+            <strong className="text-primary">A-4: </strong>
             MongoDBs aggregate is a powerful framework that allows you to
             perform advanced data analysis operations on MongoDB collections. It
             enables you to process and transform data using a pipeline of

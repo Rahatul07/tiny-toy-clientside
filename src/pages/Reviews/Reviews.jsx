@@ -37,22 +37,24 @@ const Reviews = () => {
       data-aos-offset="200"
       data-aos-duration="400"
       data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
       data-aos-once="false"
     >
       <h1
-        className=" font-bold  text-white text-center text-5xl mb-5 mt-48"
+        className=" text-5xl md:text-7xl text-center font-bold text-primary mb-5 mt-48"
         style={{ fontFamily: "'Montserrat', cursive" }}
       >
-        FOOD REVIEWS
+        PRODUCTS REVIEWS
       </h1>
-      <p className="text-white text-xl text-center mb-14 w-8/12 mx-auto">
+      <p
+        className="  text-xl text-center text-gray-500 mb-14 w-8/12 mx-auto"
+        style={{ fontFamily: "'Satisfy', cursive" }}
+      >
         Some customer reviews on products have been shown in the section. You
         can easily reach any solution to see the best reviews. The best products
         are available that are reviewed.
       </p>
       <div className="w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-20 mb-20">
-        <div className="card card-side border border-primary bg-primary bg-opacity-50  shadow-xl hover:bg-primary mb-5 pl-5 md:pl-1">
+        <div className="card card-side border border-primary bg-primary bg-opacity-70  shadow-xl hover:bg-primary mb-5 pl-5 md:pl-1">
           <figure>
             <img
               className=" h-36 w-36 m-5 rounded-2xl"
@@ -69,7 +71,7 @@ const Reviews = () => {
             </div>
 
             <div className=" text-white text-base">
-              Shop owner :{" "}
+              Shop owner :
               <span
                 className="text-warning text-xl"
                 style={{ fontFamily: "'Parisienne', cursive" }}
@@ -89,7 +91,7 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div className="card card-side hover:bg-primary shadow-xl border border-primary bg-primary bg-opacity-50 mb-5 pl-5 md:pl-1">
+        <div className="card card-side hover:bg-primary shadow-xl border border-primary bg-primary bg-opacity-70 mb-5 pl-5 md:pl-1">
           <figure>
             <img
               className=" h-36 w-36 m-5 rounded-2xl"
@@ -106,7 +108,7 @@ const Reviews = () => {
             </div>
 
             <div className=" text-white text-base">
-              Shop owner :{" "}
+              Shop owner :
               <span
                 className="text-warning text-xl"
                 style={{ fontFamily: "'Parisienne', cursive" }}
@@ -126,7 +128,7 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div className="card card-side hover:bg-primary border border-primary bg-primary bg-opacity-50 shadow-xl  mb-5 pl-5 md:pl-1">
+        <div className="card card-side hover:bg-primary border border-primary bg-primary bg-opacity-70 shadow-xl  mb-5 pl-5 md:pl-1">
           <figure>
             <img
               className=" h-36 w-36 m-5 rounded-2xl"
@@ -143,7 +145,7 @@ const Reviews = () => {
             </div>
 
             <div className=" text-white text-base">
-              Shop owner :{" "}
+              Shop owner :
               <span
                 className="text-warning text-xl"
                 style={{ fontFamily: "'Parisienne', cursive" }}
@@ -163,7 +165,7 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div className="card card-side hover:bg-primary border border-primary bg-primary bg-opacity-50 shadow-xl  mb-5 pl-5 md:pl-1">
+        <div className="card card-side hover:bg-primary border border-primary bg-primary bg-opacity-70 shadow-xl  mb-5 pl-5 md:pl-1">
           <figure>
             <img
               className=" h-36 w-36 m-5 rounded-2xl"
@@ -180,7 +182,7 @@ const Reviews = () => {
             </div>
 
             <div className=" text-white text-base">
-              Shop owner :{" "}
+              Shop owner :
               <span
                 className="text-warning text-xl"
                 style={{ fontFamily: "'Parisienne', cursive" }}
@@ -200,7 +202,7 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div className="card card-side hover:bg-primary border border-primary bg-primary bg-opacity-50 shadow-xl  mb-5 pl-5 md:pl-1">
+        <div className="card card-side hover:bg-primary border border-primary bg-primary bg-opacity-70 shadow-xl  mb-5 pl-5 md:pl-1">
           <figure>
             <img
               className=" h-36 w-36 m-5 rounded-2xl"
@@ -217,7 +219,7 @@ const Reviews = () => {
             </div>
 
             <div className=" text-white text-base">
-              Shop owner :{" "}
+              Shop owner :
               <span
                 className="text-warning text-xl"
                 style={{ fontFamily: "'Parisienne', cursive" }}
@@ -237,7 +239,7 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div className="card card-side hover:bg-primary border border-primary bg-primary bg-opacity-50 shadow-xl  mb-5 pl-5 md:pl-1">
+        <div className="card card-side hover:bg-primary border border-primary bg-primary bg-opacity-70 shadow-xl  mb-5 pl-5 md:pl-1">
           <figure>
             <img
               className=" h-36 w-36 m-5 rounded-2xl"
@@ -254,7 +256,7 @@ const Reviews = () => {
             </div>
 
             <div className=" text-white text-base">
-              Shop owner :{" "}
+              Shop owner :
               <span
                 className="text-warning text-xl"
                 style={{ fontFamily: "'Parisienne', cursive" }}

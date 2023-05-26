@@ -21,8 +21,11 @@ const AllToys = () => {
   };
   return (
     <div>
-      <h1 className="my-10 text-5xl text-white font-bold text-center">
-        All toys overview
+      <h1
+        className="my-10 text-5xl  lg:text-7xl text-primary font-bold text-center"
+        style={{ fontFamily: "'Montserrat', cursive" }}
+      >
+        ALL TOYS OVERVIEW
       </h1>
       <div className="search-box p-2 text-center flex justify-center">
         <div className="form-control">

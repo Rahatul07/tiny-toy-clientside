@@ -3,7 +3,6 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../../components/hooks/useTitle";
-import LazyLoad from "react-lazy-load";
 
 const SingleToyDetails = () => {
   useTitle("Single toy details");
@@ -16,10 +15,13 @@ const SingleToyDetails = () => {
   }, [id]);
 
   return (
-    <LazyLoad>
-      <h1 className="text-5xl font-bold text-white text-center mt-10">
-        Here is the toy details
-      </h1>{" "}
+    <div>
+      <h1
+        style={{ fontFamily: "'Montserrat', cursive" }}
+        className="text-5xl md:text-7xl mb-5 font-bold text-primary mt-10 text-center"
+      >
+        HERE IS THE TOY DETAILS
+      </h1>
       <div
         className="card w-8/12 my-20 mx-auto  shadow-xl"
         style={{
@@ -66,7 +68,7 @@ const SingleToyDetails = () => {
           </div>
         </div>
       </div>
-    </LazyLoad>
+    </div>
   );
 };
 

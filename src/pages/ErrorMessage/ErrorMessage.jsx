@@ -15,10 +15,10 @@ const ErrorMessage = () => {
         moved.
       </p>
       <p className="text-lg pb-3 text-gray-600">
-        You can go back to the{" "}
+        You can go back to the
         <Link to="/" className="text-blue-700 font-medium underline">
           homepage
-        </Link>{" "}
+        </Link>
         or use the navigation menu to find what you are looking for.
       </p>
       <p className="text-lg pb-3 text-gray-600">
